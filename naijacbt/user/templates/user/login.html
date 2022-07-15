@@ -1,0 +1,17 @@
+{% load crispy_forms_tags %}
+{% block content %}
+    <form method="POST">
+        {% csrf_token %}
+        <anything_else>
+        <fieldset>
+            <legend>Login</legend>
+            {{ form|crispy}}
+        </fieldset>
+        <div>
+            <button>Log In</button>
+        </div>
+    </form>
+    <small>
+        Need An Account? <a href="#">Sign Up</a>
+    </small>
+{% endblock%}
